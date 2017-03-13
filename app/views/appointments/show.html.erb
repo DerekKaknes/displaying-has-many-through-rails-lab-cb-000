@@ -1,0 +1,13 @@
+<h1>Appointments#show</h1>
+<table>
+  <tr>
+    <th>Appointment Time</th>
+    <th>Patient</th>
+    <th>Doctor</th>
+  </tr>
+  <tr>
+    <td><%= @appointment.display_time %></td>
+    <td><%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></td>
+    <td><%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></td>
+  </tr>
+</table>

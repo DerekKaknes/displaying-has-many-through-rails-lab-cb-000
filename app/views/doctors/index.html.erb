@@ -1,0 +1,15 @@
+<h1>Doctors#index</h1>
+<table>
+  <tr>
+    <th>Doctor</th>
+    <th>Department</th>
+  </tr>
+<% @doctors.each do |doc| %>
+  <div id=<%= "doctor_#{doc.id}" %>>
+  <tr>
+    <td><%= link_to doc.name, doctor_path(doc) %></td>
+    <td><%= doc.department %></td>
+  </tr>
+  </div>
+<% end %>
+</table>
